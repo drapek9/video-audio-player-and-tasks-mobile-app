@@ -1,0 +1,68 @@
+#: import text_font home.helper.text_font
+<HomeScreen>:
+    MDLabel:
+        id: title
+        adaptive_size: True
+        text: "Welcome in kivyMd app"
+        pos_hint: {"center_x": .5, "top": .85}
+        font_size: text_font
+    Button:
+        text: "change color"
+        on_release: root.ch_c()
+        pos_hint_y: None
+        pos_hint: {"center_x": .5}
+        size_hint: None, None
+        width: "75sp"
+        height: "20sp"
+        top: title.y - 10
+        font_size: "10sp"
+        background_color: 0, 0, 0, 1
+        background_down: "white"
+    FloatLayout:
+        size_hint: 1, None
+        height: 400
+        pos_hint: {"center_x": .5}
+        pos_hint_y: None
+        y: card.top + 20
+        
+        Video:
+            id: my_video
+            pos_hint: {"x":0, "y": 0}
+            source: "videos/goal_video.mp4"
+            #options: {"eos": root.v_e()}
+    
+    MDCard:
+        padding: 40
+        spacing: 40
+        id: card
+        pos_hint: {"center_x": .5}
+        pos_hint_y: None
+        y: 20
+        size_hint: None, None
+        size: "200sp", "50sp"
+        md_bg_color: "black"
+
+        Button:
+            text: "play"
+            id: play_button
+            on_release: root.v_f()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            size_hint: None, None
+            width: "70sp"
+            height: "25sp"
+            font_size: "15sp"
+            color: "black"
+            background_normal: ""
+            background_color: 1, 1, 1, 1
+        Button:
+            text: "restart"
+            id: restart_button
+            pos_hint: {"center_x": .5, "center_y": .5}
+            size_hint: None, None
+            width: "70sp"
+            height: "25sp"
+            font_size: "15sp"
+            color: "black"
+            background_normal: ""
+            background_color: 1, 1, 1, 1
+            on_release: root.v_r()

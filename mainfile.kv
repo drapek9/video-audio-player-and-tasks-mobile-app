@@ -1,0 +1,28 @@
+MDBottomNavigation:
+    panel_color: "black"
+    text_color_active: .5, .5, .5, 1
+    text_color_normal: 1, 1, .99, 1
+    selected_color_background: 1, 1, 1, 1
+    id: navigation_id
+
+    MDBottomNavigationItem:
+        id: list_id
+        name: "list"
+        text: "LIST"
+        icon: "text"
+        on_tab_release: app.enter_tab("list")
+        on_leave: app.leave_tab("list")
+    MDBottomNavigationItem:
+        id: home_id
+        name: "home"
+        text: "HOME"
+        icon: "home"
+        on_tab_release: app.enter_tab("home")
+        on_leave: app.leave_tab("home")
+    MDBottomNavigationItem:
+        id: player_id
+        name: "player"
+        text: "PLAYER"
+        icon: "music"
+        on_tab_release: app.enter_tab("player")
+        on_leave: app.leave_tab("player")
